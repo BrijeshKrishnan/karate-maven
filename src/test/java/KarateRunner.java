@@ -21,10 +21,10 @@ class KarateRunner
             rb.hook(new KarateHook());
         }
 
-        if (env.isEmpty() || env.toLowerCase() == "dev")
-        {
-            rb.clientFactory(MockSpringMvcServlet.getMock());
-        }
+        // if (env.isEmpty() || env.toLowerCase() == "dev")
+        // {
+        //     rb.clientFactory(MockSpringMvcServlet.getMock());
+        // }
 
         Results results = rb.parallel(1);
 

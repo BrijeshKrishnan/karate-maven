@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.company</groupId>
-	<artifactId>karate-maven-gradle</artifactId>
+	<artifactId>karate-maven</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>karate-maven-gradle</name>
-	<description>karate-maven-gradle project</description>
+	<name>karate-maven</name>
+	<description>karate-maven project</description>
 
 	<properties>
 		<java.version>11</java.version>
