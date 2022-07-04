@@ -10,8 +10,8 @@ function fn()
 
    karate.log('karate environment set to:', env);
 
-   var config = karate.read('classpath:application.yml');
-   karate.log('baseOrderUrl configured for tests: ' + config.baseOrderUrl);
+   //var config = karate.read('classpath:application.yml');
+  // karate.log('baseOrderUrl configured for tests: ' + config.baseOrderUrl);
 
    if (env == 'dev')
    {
@@ -29,5 +29,6 @@ function fn()
    karate.configure('logPrettyRequest', true);
    karate.configure('logPrettyResponse', true);
 
-   return config;
+   //return config;
+   return;
 }

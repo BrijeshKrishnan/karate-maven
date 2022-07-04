@@ -11,12 +11,10 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<scala.version>2.13.3</scala.version>
-		<karate.version>1.0.1</karate.version>
-		<jacoco.plugin.version>0.8.4</jacoco.plugin.version>
+		<karate.version>1.2.0.RC2</karate.version>
+		<jacoco.plugin.version>0.8.8</jacoco.plugin.version>
 		<gatling.plugin.version>3.1.1</gatling.plugin.version>
 		<maven.surefire.version>2.22.2</maven.surefire.version>
-		<spring.boot.version>1.5.22.RELEASE</spring.boot.version>
 		<maven.compiler.version>3.6.0</maven.compiler.version>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
@@ -34,7 +32,7 @@
         </repository>
     </repositories>
 
-	<dependencyManagement>
+	<!-- <dependencyManagement>
 		<dependencies>
 		   <dependency>
 			   <groupId>org.springframework.boot</groupId>
@@ -44,7 +42,7 @@
 			   <scope>import</scope>
 		   </dependency>
 	   </dependencies>
-   </dependencyManagement>
+   </dependencyManagement> -->
 
 	<dependencies>
 		<dependency>
@@ -53,18 +51,7 @@
 			<version>5.0.0</version>
 			<scope>compile</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.scala-lang</groupId>
-			<artifactId>scala-library</artifactId>
-			<version>${scala.version}</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<version>${spring.boot.version}</version>
-			<scope>compile</scope>
-		</dependency>
+	
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-core</artifactId>
@@ -101,12 +88,12 @@
 			<version>2.12.1</version>
 			<scope>compile</scope>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>2.12.1</version>
 			<scope>compile</scope>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
@@ -124,18 +111,6 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.18</version>
 			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<version>${spring.boot.version}</version>
-			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-				  <artifactId>junit-vintage-engine</artifactId>
-				  <groupId>org.junit.vintage</groupId>
-				</exclusion>
-			  </exclusions>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -182,11 +157,6 @@
 			</testResource>
 	  	</testResources>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>${spring.boot.version}</version>
-			</plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
